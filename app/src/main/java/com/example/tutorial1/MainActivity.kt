@@ -6,9 +6,11 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -41,8 +43,12 @@ class MainActivity : ComponentActivity() {
                     .size(40.dp)
                     .clip(CircleShape)
             )
+
+            Spacer(modifier = Modifier.width(8.dp))
+
             Column {
                 Text(text = "Hello ${msg.author}")
+                Spacer(modifier = Modifier.width(4.dp))
                 Text(text = msg.body)
             }
         }
