@@ -7,6 +7,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.size
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -20,7 +21,11 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MessageCard(Message("Patryk", "testyyy"))
+            Tutorial1Theme {
+                Surface(modifier = Modifier.fillMaxSize()) {
+                    MessageCard(Message("Patryk", "testyyy"))
+                }
+            }
         }
     }
 
@@ -44,8 +49,12 @@ class MainActivity : ComponentActivity() {
     @Preview(showSystemUi = true)
     @Composable
     fun PreviewMassageCard() {
-        MessageCard(
-            msg = Message("Patryk", "testyyy")
-        )
+        Tutorial1Theme {
+            Surface {
+                MessageCard(
+                    msg = Message("Patryk", "testyyy")
+                )
+            }
+        }
     }
 }
