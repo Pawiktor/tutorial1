@@ -19,6 +19,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -53,9 +54,13 @@ class MainActivity : ComponentActivity() {
             Spacer(modifier = Modifier.width(8.dp))
 
             Column {
-                Text(text = "Hello ${msg.author}")
+                Text(text = "Hello ${msg.author}",
+                    color = MaterialTheme.colors.secondary,
+                    style = MaterialTheme.typography.body1
+                )
                 Spacer(modifier = Modifier.width(4.dp))
-                Text(text = msg.body)
+                Text(text = msg.body,
+                    style = MaterialTheme.typography.h6)
             }
         }
 
