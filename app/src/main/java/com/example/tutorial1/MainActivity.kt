@@ -61,6 +61,9 @@ class MainActivity : ComponentActivity() {
                 Spacer(modifier = Modifier.width(4.dp))
                 Text(text = msg.body,
                     style = MaterialTheme.typography.h6)
+                Surface(shape = MaterialTheme.shapes.medium, elevation = 10.dp) {
+                    Text(text = msg.body, modifier = Modifier.padding(all = 4.dp))
+                }
             }
         }
 
