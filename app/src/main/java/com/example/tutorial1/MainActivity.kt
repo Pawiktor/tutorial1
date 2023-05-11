@@ -67,7 +67,7 @@ class MainActivity : ComponentActivity() {
         }
 
     }
-sadasda
+
     @Preview(showSystemUi = true, showBackground = true, uiMode = UI_MODE_NIGHT_YES, )
     @Composable
     fun PreviewMassageCard() {
