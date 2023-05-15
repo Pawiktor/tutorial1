@@ -34,6 +34,7 @@ class MainActivity : ComponentActivity() {
                 Surface(modifier = Modifier.fillMaxSize()) {
                     MessageCard(Message("Patryk", "testyyy"))
                 }
+                Text(text = "asdasd")
             }
         }
     }
