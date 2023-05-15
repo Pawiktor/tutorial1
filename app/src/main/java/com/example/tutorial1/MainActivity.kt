@@ -75,5 +75,6 @@ class MainActivity : ComponentActivity() {
         MessageCard(
             msg = Message("Patryk", "testyyy")
         )
+        Text(text = "test")
     }
 }
